@@ -1,7 +1,7 @@
 {
-    "custom/appmenu": {
+    "custom/avocado": {
         "format": "🥑",
-        "on-click": "wlogout",
+        "on-click": "rofi -show drun",
         "tooltip": false
     },
     "hyprland/workspaces": {
@@ -73,7 +73,8 @@
         "tooltip-format-wifi": "   {essid} ({signalStrength}%)",
         "tooltip-format-ethernet": "  {ifname} ({ipaddr}/{cidr})",
         "tooltip-format-disconnected": "Disconnected",
-        "max-length": 50
+        "max-length": 50,
+        "on-click": "~/.config/scripts/networkmanager.sh"
     },
     "idle_inhibitor": {
         "format": "{icon}",
@@ -81,11 +82,30 @@
         "format-icons": {
             "activated": "",
             "deactivated": ""
-        },
-        "on-click": "~/.config/scripts/networkmanager.sh"
+        }
     },
     "clock": {
         "tooltip-format": "<big>{:%Y %B}</big>\n<tt><small>{calendar}</small></tt>",
         "format-alt": "{:%Y-%m-%d}"
+    },
+    "backlight": {
+        "device": "intel_backlight",
+        "format": "{icon}{percent}%",
+        "format-icons": [
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            ""
+        ]
+    },
+    "custom/off": {
+        "format": "",
+        "on-click": "wlogout",
+        "tooltip": false
     }
 }

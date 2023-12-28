@@ -1,0 +1,327 @@
+* {
+  font-family: "Fira Sans Semibold", FontAwesome, Roboto, Helvetica, Arial,
+    sans-serif;
+}
+
+/* -----------------------------------------------------
+ * Window
+ * ----------------------------------------------------- */
+
+#window {
+  font-size: 20px;
+}
+
+window#waybar.empty #window {
+  background-color: transparent;
+}
+
+window#waybar {
+  background: transparent;
+}
+
+/* -----------------------------------------------------
+ * Apps
+ * ----------------------------------------------------- */
+
+#custom-avocado {
+  background-color: transparent;
+  font-size: 22px;
+}
+
+/* -----------------------------------------------------
+ * Workspaces 
+ * ----------------------------------------------------- */
+
+#workspaces {
+  background: transparent;
+  font-size: 15px;
+}
+
+#workspaces button {
+  padding: 5px 9px;
+  margin: 5px;
+  border-radius: 50px;
+  color: white;
+  background-color: green;
+  transition: all 0.3s ease-in-out;
+}
+
+#workspaces button.active {
+  color: white;
+  background: black;
+  border-radius: 15px;
+  min-width: 30px;
+  transition: all 0.3s ease-in-out;
+  opacity: 1;
+  font-weight: bold;
+}
+
+#workspaces button:hover {
+  background-color: green;
+}
+
+/* -----------------------------------------------------
+ * Tooltips
+ * ----------------------------------------------------- */
+
+tooltip {
+  border-radius: 10px;
+  background-color: black;
+  opacity: 0.8;
+  padding: 20px;
+  margin: 0px;
+}
+
+tooltip label {
+  color: white;
+}
+
+/* -----------------------------------------------------
+ * Taskbar
+ * ----------------------------------------------------- */
+
+#taskbar {
+  margin: 3px 15px 3px 0px;
+  padding: 0px;
+  border-radius: 15px;
+  font-weight: normal;
+  font-style: normal;
+  opacity: 0.8;
+}
+
+#taskbar button {
+  margin: 0;
+  border-radius: 15px;
+  padding: 0px 5px 0px 5px;
+}
+
+/* -----------------------------------------------------
+ * Idle Inhibator
+ * ----------------------------------------------------- */
+
+#idle_inhibitor {
+  font-size: 16px;
+}
+
+#idle_inhibitor.activated {
+  font-size: 16px;
+  color: red;
+}
+
+/* -----------------------------------------------------
+ * Clock
+ * ----------------------------------------------------- */
+
+#clock {
+  font-size: 16px;
+  color: white;
+  border-radius: 15px;
+  padding: 2px 10px 0px 10px;
+  margin: 5px 15px 5px 0px;
+  opacity: 0.8;
+}
+
+/* -----------------------------------------------------
+ * Pulseaudio
+ * ----------------------------------------------------- */
+
+#pulseaudio {
+  font-size: 16px;
+  color: white;
+  border-radius: 15px;
+  padding: 2px 10px 0px 10px;
+  margin: 5px 15px 5px 0px;
+  opacity: 0.8;
+}
+
+#pulseaudio.muted {
+  color: black;
+}
+
+/* -----------------------------------------------------
+ * Network
+ * ----------------------------------------------------- */
+
+#network,
+#custom-off {
+  background-color: rgba(44, 44, 44, 0.227);
+  color: rgb(255, 255, 255);
+  font-size: 16px;
+  border-radius: 15px;
+  padding: 2px 10px 0px 10px;
+  margin: 5px 15px 5px 0px;
+  opacity: 0.8;
+}
+
+#network.ethernet {
+  background-color: transparent;
+  color: red;
+}
+
+#network.wifi {
+  color: #ff0000;
+}
+
+/* -----------------------------------------------------
+ * Bluetooth
+ * ----------------------------------------------------- */
+
+#bluetooth,
+#bluetooth.on,
+#bluetooth.connected {
+  font-size: 16px;
+  color: white;
+  border-radius: 15px;
+  padding: 2px 10px 0px 10px;
+  margin: 5px 15px 5px 0px;
+  opacity: 0.8;
+}
+
+#bluetooth.off {
+  background-color: transparent;
+  padding: 2px 10px 0px 10px;
+  margin: 5px 15px 5px 0px;
+}
+
+/* -----------------------------------------------------
+ * Battery
+ * ----------------------------------------------------- */
+
+#battery {
+  font-size: 16px;
+  color: white;
+  border-radius: 15px;
+  padding: 2px 15px 0px 10px;
+  margin: 5px 15px 5px 0px;
+  opacity: 0.8;
+}
+
+#battery.charging,
+#battery.plugged {
+  color: greenyellow;
+}
+
+@keyframes blink {
+  to {
+    color: red;
+  }
+}
+
+#battery.critical:not(.charging) {
+  color: red;
+  animation-name: blink;
+  animation-duration: 0.5s;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
+}
+
+/* -----------------------------------------------------
+ * Tray
+ * ----------------------------------------------------- */
+
+#tray {
+  background-color: #2980b9;
+}
+
+#tray > .passive {
+  -gtk-icon-effect: dim;
+}
+
+#tray > .needs-attention {
+  -gtk-icon-effect: highlight;
+  background-color: #eb4d4b;
+}
+
+/* -----------------------------------------------------
+ * Other
+ * ----------------------------------------------------- */
+
+label:focus {
+  background-color: #000000;
+}
+
+#backlight {
+  background-color: #90b1b1;
+}
+
+#network.disconnected {
+  background-color: #f53c3c;
+}
+
+/* 
+
+* {
+  border: none;
+  font-family: "Fira Code", "Symbols Nerd Font Mono";
+  font-size: 16px;
+  font-feature-settings: '"zero", "ss01", "ss02", "ss03", "ss04", "ss05", "cv31"';
+}
+
+window#waybar {
+  background: transparent;
+}
+
+#custom-avocado,
+#workspaces {
+  padding-left: 10px;
+  padding-right: 10px;
+}
+
+#custom-avocado {
+  font-size: 20px;
+}
+
+#workspaces button {
+  padding: 5px 9px;
+  margin: 5px;
+  border-radius: 50px;
+  color: white;
+  background-color: green;
+  transition: all 0.3s ease-in-out;
+}
+
+#workspaces button.active {
+  color: white;
+  background: black;
+  border-radius: 15px;
+  min-width: 30px;
+  transition: all 0.3s ease-in-out;
+  opacity: 1;
+  font-weight: bold;
+}
+
+#clock,
+#backlight,
+#pulseaudio,
+#bluetooth,
+#network,
+#battery {
+  border-radius: 10px;
+  background-color: #11111b;
+  color: #cdd6f4;
+  margin-top: 15px;
+  padding-left: 10px;
+  padding-right: 10px;
+  margin-right: 15px;
+}
+
+#backlight,
+#bluetooth {
+  border-top-right-radius: 0;
+  border-bottom-right-radius: 0;
+  padding-right: 5px;
+  margin-right: 0;
+}
+
+#pulseaudio,
+#network {
+  border-top-left-radius: 0;
+  border-bottom-left-radius: 0;
+  padding-left: 5px;
+}
+
+#clock {
+  margin-right: 0;
+}
+*/
