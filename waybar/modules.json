@@ -8,22 +8,25 @@
         "on-click": "activate",
         "active-only": false,
         "all-outputs": true,
-        "format": "{}",
+        "format": "{icon}",
         "format-icons": {
-            "urgent": "",
-            "active": "",
-            "default": ""
+            "default": ""
         },
         "persistent-workspaces": {
             "*": 3
         }
     },
+    "hyprland/window": {
+        "format": "{title}",
+        "on-scroll-up": "hyprctl dispatch workspace e+1",
+        "on-scroll-down": "hyprctl dispatch workspace e-1"        
+    },
     "pulseaudio": {
-        "format": "{icon} {volume}%",
-        "format-bluetooth": "{volume}% {icon} {format_source}",
-        "format-bluetooth-muted": " {icon} {format_source}",
+        "format": "{icon} {volume}",
+        "format-bluetooth": "{volume} {icon}  {format_source}",
+        "format-bluetooth-muted": " {icon}  {format_source}",
         "format-muted": " {format_source}",
-        "format-source": "{volume}% ",
+        "format-source": "{volume} ",
         "format-source-muted": "",
         "format-icons": {
             "headphone": "",
@@ -41,9 +44,7 @@
         "on-click": "pavucontrol"
     },
     "bluetooth": {
-        "format": " {status}",
-        "format-disabled": "",
-        "format-off": "",
+        "format": "",
         "interval": 30,
         "on-click": "blueman-manager"
     },
@@ -52,9 +53,9 @@
             "warning": 30,
             "critical": 15
         },
-        "format": "{icon}   {capacity}%",
-        "format-charging": "  {capacity}%",
-        "format-plugged": "  {capacity}%",
+        "format": "{icon} {capacity}",
+        "format-charging": "  {capacity}",
+        "format-plugged": "  {capacity}",
         "format-alt": "{icon}  {time}",
         "format-icons": [
             " ",
@@ -66,23 +67,15 @@
     },
     "network": {
         "format": "{ifname}",
-        "format-wifi": "   {signalStrength}%",
+        "format-wifi": " {signalStrength}",
         "format-ethernet": "  {ipaddr}",
         "format-disconnected": "Not connected",
         "tooltip-format": " {ifname} via {gwaddri}",
-        "tooltip-format-wifi": "   {essid} ({signalStrength}%)",
+        "tooltip-format-wifi": "   {essid} ({signalStrength})",
         "tooltip-format-ethernet": "  {ifname} ({ipaddr}/{cidr})",
         "tooltip-format-disconnected": "Disconnected",
         "max-length": 50,
         "on-click": "~/.config/scripts/networkmanager.sh"
-    },
-    "idle_inhibitor": {
-        "format": "{icon}",
-        "tooltip": false,
-        "format-icons": {
-            "activated": "",
-            "deactivated": ""
-        }
     },
     "clock": {
         "tooltip-format": "<big>{:%Y %B}</big>\n<tt><small>{calendar}</small></tt>",
@@ -90,17 +83,9 @@
     },
     "backlight": {
         "device": "intel_backlight",
-        "format": "{icon}{percent}%",
+        "format": "{icon} {percent}",
         "format-icons": [
-            "",
-            "",
-            "",
-            "",
-            "",
-            "",
-            "",
-            "",
-            ""
+            ""
         ]
     },
     "custom/off": {

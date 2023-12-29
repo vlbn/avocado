@@ -1,22 +1,30 @@
 * {
-  font-family: "Fira Sans Semibold", FontAwesome, Roboto, Helvetica, Arial,
-    sans-serif;
+  font-family: "Fira Sans", FontAwesome, Roboto, Helvetica, Arial, sans-serif;
 }
 
-/* -----------------------------------------------------
- * Window
- * ----------------------------------------------------- */
+@define-color col1 #ffffff;
+@define-color col2 #000000;
+@define-color col3 green;
 
-#window {
-  font-size: 20px;
+button {
+  border: none;
+  border-radius: 0;
+}
+button:hover {
+  box-shadow: inherit;
+  text-shadow: inherit;
 }
 
-window#waybar.empty #window {
-  background-color: transparent;
+tooltip {
+  border-radius: 10px;
+  background-color: @col2;
+  opacity: 0.8;
+  padding: 20px;
+  margin: 0px;
 }
 
-window#waybar {
-  background: transparent;
+tooltip label {
+  color: @col1;
 }
 
 /* -----------------------------------------------------
@@ -24,88 +32,41 @@ window#waybar {
  * ----------------------------------------------------- */
 
 #custom-avocado {
-  background-color: transparent;
-  font-size: 22px;
+  margin-left: 1.5rem;
+  margin-right: 1.5rem;
+  font-size: 1.3rem;
 }
 
 /* -----------------------------------------------------
  * Workspaces 
  * ----------------------------------------------------- */
 
-#workspaces {
-  background: transparent;
-  font-size: 15px;
-}
-
 #workspaces button {
-  padding: 5px 9px;
-  margin: 5px;
-  border-radius: 50px;
-  color: white;
-  background-color: green;
+  color: @col1;
   transition: all 0.3s ease-in-out;
-}
-
-#workspaces button.active {
-  color: white;
-  background: black;
-  border-radius: 15px;
-  min-width: 30px;
-  transition: all 0.3s ease-in-out;
-  opacity: 1;
   font-weight: bold;
 }
 
+#workspaces button.active {
+  color: @col3;
+  font-size: 1.5rem;
+  transition: all 0.3s ease-in-out;
+}
+
 #workspaces button:hover {
-  background-color: green;
+  background: transparent;
 }
 
-/* -----------------------------------------------------
- * Tooltips
- * ----------------------------------------------------- */
+/* WINDOW */
 
-tooltip {
-  border-radius: 10px;
-  background-color: black;
-  opacity: 0.8;
-  padding: 20px;
-  margin: 0px;
+window {
+  background: transparent;
 }
 
-tooltip label {
-  color: white;
-}
-
-/* -----------------------------------------------------
- * Taskbar
- * ----------------------------------------------------- */
-
-#taskbar {
-  margin: 3px 15px 3px 0px;
-  padding: 0px;
-  border-radius: 15px;
-  font-weight: normal;
-  font-style: normal;
-  opacity: 0.8;
-}
-
-#taskbar button {
-  margin: 0;
-  border-radius: 15px;
-  padding: 0px 5px 0px 5px;
-}
-
-/* -----------------------------------------------------
- * Idle Inhibator
- * ----------------------------------------------------- */
-
-#idle_inhibitor {
-  font-size: 16px;
-}
-
-#idle_inhibitor.activated {
-  font-size: 16px;
-  color: red;
+#window {
+  color: @col1;
+  font-size: 1.3rem;
+  margin-left: 1.5rem;
 }
 
 /* -----------------------------------------------------
@@ -214,39 +175,6 @@ tooltip label {
   animation-timing-function: linear;
   animation-iteration-count: infinite;
   animation-direction: alternate;
-}
-
-/* -----------------------------------------------------
- * Tray
- * ----------------------------------------------------- */
-
-#tray {
-  background-color: #2980b9;
-}
-
-#tray > .passive {
-  -gtk-icon-effect: dim;
-}
-
-#tray > .needs-attention {
-  -gtk-icon-effect: highlight;
-  background-color: #eb4d4b;
-}
-
-/* -----------------------------------------------------
- * Other
- * ----------------------------------------------------- */
-
-label:focus {
-  background-color: #000000;
-}
-
-#backlight {
-  background-color: #90b1b1;
-}
-
-#network.disconnected {
-  background-color: #f53c3c;
 }
 
 /* 

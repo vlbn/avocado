@@ -19,7 +19,6 @@
         "battery",
         "network",
         "clock",
-        "idle_inhibitor",
         "backlight",
         "custom/off"
     ]
