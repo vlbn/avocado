@@ -1,25 +1,24 @@
 {
     "layer": "top",
     "margin-top": 5,
-    "margin-bottom": -15,
-    "margin-left": 0,
-    "margin-right": 0,
+    "margin-bottom": -5,
+    "margin-left": 5,
+    "margin-right": 5,
     "spacing": 0,
     "include": [
         "~/.config/waybar/modules.json"
     ],
     "modules-left": [
         "custom/avocado",
-        "hyprland/workspaces",
         "hyprland/window"
     ],
     "modules-right": [
+        "hyprland/workspaces",
         "pulseaudio",
         "bluetooth",
         "battery",
         "network",
         "clock",
-        "backlight",
-        "custom/off"
+        "backlight"
     ]
 }
