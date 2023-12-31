@@ -4,7 +4,7 @@
 
 @define-color col1 #ffffff;
 @define-color col2 #000000;
-@define-color col3 green;
+@define-color col3 #ef476f;
 
 button {
   border: none;
@@ -73,7 +73,7 @@ tooltip label {
 /* */
 
 #pulseaudio.muted {
-  color: @col2;
+  color: @col3;
 }
 
 /* */
@@ -113,7 +113,7 @@ tooltip label {
 }
 
 #battery.critical:not(.charging) {
-  color: red;
+  color: @col3;
   animation-name: blink;
   animation-duration: 0.5s;
   animation-timing-function: linear;
