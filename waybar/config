@@ -20,7 +20,6 @@
         "bluetooth",
         "battery",
         "network",
-        "clock",
-        "backlight"
+        "clock"
     ]
 }
