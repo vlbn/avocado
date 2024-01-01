@@ -1,141 +1,127 @@
+// vim: fdm=marker
+
+configuration {
+  modes: "window,drun,run,ssh";
+  font: "JetBrainsMono NF 18";
+  drun-display-format: "{name}";
+}
+
 * {
-    selected-normal-foreground:  rgba ( 249, 249, 249, 100 % );
-    foreground:                  rgba ( 207, 220, 235, 100 % );
-    normal-foreground:           @foreground;
-    alternate-normal-background: rgba ( 23, 34, 44, 50 % );
-    red:                         rgba ( 220, 50, 47, 100 % );
-    selected-urgent-foreground:  rgba ( 249, 249, 249, 100 % );
-    blue:                        rgba ( 38, 139, 210, 100 % );
-    urgent-foreground:           rgba ( 204, 102, 102, 100 % );
-    alternate-urgent-background: rgba ( 75, 81, 96, 90 % );
-    active-foreground:           rgba ( 101, 172, 255, 100 % );
-    lightbg:                     rgba ( 238, 232, 213, 100 % );
-    selected-active-foreground:  rgba ( 249, 249, 249, 100 % );
-    alternate-active-background: rgba ( 16, 23, 30, 100 % );
-    background:                  rgba ( 20, 29, 38, 100 % );
-    alternate-normal-foreground: @foreground;
-    normal-background:           @background;
-    lightfg:                     rgba ( 88, 104, 117, 100 % );
-    selected-normal-background:  rgba ( 64, 132, 214, 100 % );
-    border-color:                rgba ( 17, 25, 32, 100 % );
-    spacing:                     2;
-    separatorcolor:              rgba ( 29, 31, 33, 100 % );
-    urgent-background:           rgba ( 29, 31, 33, 17 % );
-    selected-urgent-background:  rgba ( 165, 66, 66, 100 % );
-    alternate-urgent-foreground: @urgent-foreground;
-    background-color:            rgba ( 20, 29, 38, 100 % );
-    alternate-active-foreground: @active-foreground;
-    active-background:           rgba ( 29, 31, 33, 17 % );
-    selected-active-background:  rgba ( 68, 145, 237, 100 % );
+  // general
+  bg: #282828;
+  bgt: #28282895;
+  t: transparent;
+  fg: #ffffff;
+  gg: #ef476f;
+
+  selected-bg: @fg;
+  selected-fg: @bg;
+
+  // for windows
+  active: #a9b665;
+  urgent: #fb4934;
 }
-#window {
-    background-color: @background;
-    border:           5;
-    padding:          5;
+
+window {
+  fullscreen: true;
+  padding: 35% 30%;
+  transparency: "real";
+  background-color: @bgt;
+  border-color: @t;
 }
-#mainbox {
-    border:  0;
-    padding: 0;
+
+listview {
+  border: 0 0 0 0;
+  padding: 23 0 0;
+  scrollbar: true;
 }
-#message {
-    border:       2px 0px 0px ;
-    border-color: @separatorcolor;
-    padding:      1px ;
-}
-#textbox {
-    text-color: @foreground;
-}
-#listview {
-    fixed-height: 0;
-    border:       2px 0px 0px ;
-    border-color: @separatorcolor;
-    spacing:      2px ;
-    scrollbar:    true;
-    padding:      2px 0px 0px ;
-}
-#element {
-    border:  0;
-    padding: 1px ;
-}
-#element.normal.normal {
-    background-color: @normal-background;
-    text-color:       @normal-foreground;
-}
-#element.normal.urgent {
-    background-color: @urgent-background;
-    text-color:       @urgent-foreground;
-}
-#element.normal.active {
-    background-color: @active-background;
-    text-color:       @active-foreground;
-}
-#element.selected.normal {
-    background-color: @selected-normal-background;
-    text-color:       @selected-normal-foreground;
-}
-#element.selected.urgent {
-    background-color: @selected-urgent-background;
-    text-color:       @selected-urgent-foreground;
-}
-#element.selected.active {
-    background-color: @selected-active-background;
-    text-color:       @selected-active-foreground;
-}
-#element.alternate.normal {
-    background-color: @alternate-normal-background;
-    text-color:       @alternate-normal-foreground;
-}
-#element.alternate.urgent {
-    background-color: @alternate-urgent-background;
-    text-color:       @alternate-urgent-foreground;
-}
-#element.alternate.active {
-    background-color: @alternate-active-background;
-    text-color:       @alternate-active-foreground;
-}
-#scrollbar {
-    width:        4px ;
+
+scrollbar {
+    width:        4px;
     border:       0;
-    handle-color: @alternate-normal-background;
-    handle-width: 8px ;
-    padding:      0;
+    handle-color: @gg;
+    handle-width: 8px;
+    padding:      0 5;
 }
-#sidebar {
-    border:       2px 0px 0px ;
-    border-color: @separatorcolor;
+
+entry {
+    placeholder: "";
 }
-#button {
+
+textbox {
+    text-color: @fg;
+}
+
+element {
+    border:  0;
+    padding: 5px 10px;
+}
+element.normal.normal {
+    background-color: @t;
+    text-color:       @fg;
+}
+element.normal.urgent {
+    background-color: @t;
+    text-color:       @urgent;
+}
+element.normal.active {
+    background-color: @t;
+    text-color:       @active;
+}
+element.selected.normal {
+    background-color: @selected-bg;
+    text-color:       @selected-fg;
+}
+element.selected.urgent {
+    background-color: @selected-bg;
+    text-color:       @urgent;
+}
+element.selected.active {
+    background-color: @selected-bg;
+    text-color:       @selected-fg;
+}
+element.alternate.normal {
+    background-color: @t;
+    text-color:       @fg;
+}
+element.alternate.urgent {
+    background-color: @t;
+    text-color:       @urgent;
+}
+element.alternate.active {
+    background-color: @t;
+    text-color:       @active;
+}
+
+sidebar {
+    border:       2px 0 0;
+    border-color: @fg;
+}
+
+inputbar {
     spacing:    0;
-    text-color: @normal-foreground;
+    text-color: @fg;
+    padding:    2px;
+    children:   [ prompt, textbox-prompt-sep, entry, case-indicator ];
 }
-#button.selected {
-    background-color: @selected-normal-background;
-    text-color:       @selected-normal-foreground;
-}
-#inputbar {
+
+case-indicator,
+entry,
+prompt,
+button {
     spacing:    0;
-    text-color: @normal-foreground;
-    padding:    1px ;
+    text-color: @fg;
 }
-#case-indicator {
-    spacing:    0;
-    text-color: @normal-foreground;
+
+button.selected {
+    background-color: @bg;
+    text-color:       @fg;
 }
-#entry {
-    spacing:    0;
-    text-color: @normal-foreground;
-}
-#prompt {
-    spacing:    0;
-    str:       "Foo";
-    text-color: @normal-foreground;
-}
-#inputbar {
-    children:   [ prompt,textbox-prompt-colon,entry,case-indicator ];
-}
-#textbox-prompt-colon {
+
+textbox-prompt-sep {
     expand:     false;
     str:        ":";
-    margin:     0px 0.3em 0em 0em ;
-    text-color: @normal-foreground;
+    text-color: @fg;
+    margin:     0 0.3em 0 0;
 }
+// }}}
