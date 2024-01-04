@@ -12,6 +12,7 @@ effect-blur= 7x5
 indicator
 indicator-radius=100
 indicator-thickness=0
+indicator-x-position=1700
 
 key-hl-color=ffffff
 separator-color=00000000
