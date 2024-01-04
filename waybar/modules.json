@@ -19,7 +19,8 @@
     "hyprland/window": {
         "format": "{title}",
         "on-scroll-up": "hyprctl dispatch workspace e+1",
-        "on-scroll-down": "hyprctl dispatch workspace e-1"        
+        "on-scroll-down": "hyprctl dispatch workspace e-1",
+        "max-length": 50        
     },
     "pulseaudio": {
         "format": "{icon} {volume}",
