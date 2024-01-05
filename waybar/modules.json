@@ -20,7 +20,7 @@
         "format": "{title}",
         "on-scroll-up": "hyprctl dispatch workspace e+1",
         "on-scroll-down": "hyprctl dispatch workspace e-1",
-        "max-length": 50        
+        "max-length": 60        
     },
     "pulseaudio": {
         "format": "{icon} {volume}",
@@ -70,12 +70,12 @@
         "format": "{ifname}",
         "format-wifi": " {signalStrength}",
         "format-ethernet": "  {ipaddr}",
-        "format-disconnected": "Not connected",
+        "format-disconnected": "💀",
         "tooltip-format": " {ifname} via {gwaddri}",
-        "tooltip-format-wifi": "   {essid} ({signalStrength})",
+        "tooltip-format-wifi": "  {ipaddr} {essid} ({signalStrength})",
         "tooltip-format-ethernet": "  {ifname} ({ipaddr}/{cidr})",
-        "tooltip-format-disconnected": "Disconnected",
-        "max-length": 50,
+        "tooltip-format-disconnected": "💀",
+        "max-length": 60,
         "on-click": "~/.config/scripts/networkmanager.sh"
     },
     "clock": {
