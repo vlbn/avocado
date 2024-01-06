@@ -8,18 +8,20 @@
     "include": [
         "~/.config/waybar/modules.json"
     ],
-    "modules-center": [
-        "hyprland/workspaces"
-    ],
     "modules-left": [
         "custom/avocado",
         "hyprland/window"
     ],
+    "modules-center": [
+        "hyprland/workspaces"
+    ],
     "modules-right": [
         "pulseaudio",
-        "bluetooth",
         "battery",
         "network",
-        "clock"
+        "clock",
+        "bluetooth",
+        "custom/tvmode",
+        "custom/wlogout"
     ]
 }

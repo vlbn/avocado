@@ -4,6 +4,11 @@
         "on-click": "rofi -show drun",
         "tooltip": false
     },
+    "hyprland/window": {
+        "format": "{title}",
+        "max-length": 60,
+        "separate-outputs": true
+    },
     "hyprland/workspaces": {
         "on-click": "activate",
         "active-only": false,
@@ -16,19 +21,16 @@
             "*": 3
         }
     },
-    "hyprland/window": {
-        "format": "{title}",
-        "on-scroll-up": "hyprctl dispatch workspace e+1",
-        "on-scroll-down": "hyprctl dispatch workspace e-1",
-        "max-length": 60        
+    "custom/tvmode": {
+        "format": "",
+        "on-click": "rofi -show drun",
+        "tooltip": false
     },
     "pulseaudio": {
         "format": "{icon} {volume}",
-        "format-bluetooth": "{volume} {icon}  {format_source}",
-        "format-bluetooth-muted": " {icon}  {format_source}",
-        "format-muted": " {format_source}",
-        "format-source": "{volume} ",
-        "format-source-muted": "",
+        "format-bluetooth": "{icon}  {volume}",
+        "format-bluetooth-muted": "  {volume}",
+        "format-muted": "  {volume}",
         "format-icons": {
             "headphone": "",
             "hands-free": "",
@@ -68,18 +70,33 @@
     },
     "network": {
         "format": "{ifname}",
-        "format-wifi": " {signalStrength}",
+        "format-wifi": "  {signalStrength}",
         "format-ethernet": "  {ipaddr}",
-        "format-disconnected": "💀",
+        "format-disconnected": "",
         "tooltip-format": " {ifname} via {gwaddri}",
         "tooltip-format-wifi": "  {ipaddr} {essid} ({signalStrength})",
         "tooltip-format-ethernet": "  {ifname} ({ipaddr}/{cidr})",
-        "tooltip-format-disconnected": "💀",
+        "tooltip-format-disconnected": "",
         "max-length": 60,
-        "on-click": "~/.config/scripts/networkmanager.sh"
+        "on-click": "kitty ~/.config/scripts/networkmanager.sh"
     },
     "clock": {
+        "format": "  {:%H:%M}",
         "tooltip-format": "<big>{:%Y %B}</big>\n<tt><small>{calendar}</small></tt>",
-        "format-alt": "{:%Y-%m-%d}"
+        "format-alt": "{:%Y-%m-%d}",
+        "calendar": {
+            "format": {
+                "months": "<span color='#ffead3'><b>{}</b></span>",
+                "days": "<span color='#ecc6d9'><b>{}</b></span>",
+                "weeks": "<span color='#99ffdd'><b>W{}</b></span>",
+                "weekdays": "<span color='#ffcc66'><b>{}</b></span>",
+                "today": "<span color='#ff6699'><b><u>{}</u></b></span>"
+            }
+        }
+    },
+    "custom/wlogout": {
+        "format": "",
+        "on-click": "pkill wlogout || wlogout",
+        "tooltip": false
     }
 }

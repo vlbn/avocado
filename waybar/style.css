@@ -48,7 +48,7 @@ tooltip label {
 /* */
 
 #waybar {
-  background:transparent;
+  background: transparent;
 }
 
 #window {
@@ -59,6 +59,8 @@ tooltip label {
 /* */
 
 #custom-avocado,
+#custom-tvmode,
+#custom-wlogout,
 #clock,
 #pulseaudio,
 #network,
@@ -83,6 +85,12 @@ tooltip label {
 }
 #network.wifi {
   color: @color1;
+}
+
+#network.disabled,
+#network.disconnected,
+#network.linked {
+  color: @col3;
 }
 
 /* */
@@ -112,7 +120,9 @@ tooltip label {
   }
 }
 
-#battery.critical:not(.charging) {
+#battery.critical:not(.charging),
+#network.disabled,
+#network.disconnected {
   color: @col3;
   animation-name: blink;
   animation-duration: 0.5s;
