@@ -59,7 +59,7 @@ tooltip label {
 /* */
 
 #custom-avocado,
-#custom-tvmode,
+#idle_inhibitor,
 #custom-wlogout,
 #clock,
 #pulseaudio,
@@ -119,6 +119,21 @@ tooltip label {
     color: @col2;
   }
 }
+
+@keyframes blip {
+  to {
+    color: greenyellow;
+  }
+}
+
+#idle_inhibitor.activated {
+  animation-name: blip;
+  animation-duration: 0.5s;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
+}
+
 
 #battery.critical:not(.charging),
 #network.disabled,

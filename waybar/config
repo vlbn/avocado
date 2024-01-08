@@ -21,7 +21,6 @@
         "network",
         "clock",
         "bluetooth",
-        "custom/tvmode",
         "custom/wlogout"
     ]
 }
