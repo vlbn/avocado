@@ -57,9 +57,17 @@ tooltip label {
 }
 
 /* */
+#tray > .active {
+  color: aquamarine;
+} 
 
+/* */
+#tray,
+#tray menu,
+#tray > .passive,
+#tray > .needs-attention,
+#group-hardware,
 #custom-avocado,
-#idle_inhibitor,
 #custom-wlogout,
 #clock,
 #pulseaudio,
@@ -69,7 +77,7 @@ tooltip label {
 #backlight {
   color: @col1;
   font-size: 1.3rem;
-  margin: 5px 10px;
+  margin: 5px 7px;
 }
 
 /* */
@@ -81,16 +89,14 @@ tooltip label {
 /* */
 
 #network.ethernet {
-  color: @col3;
+  color: @col1;
 }
 #network.wifi {
   color: @color1;
 }
 
-#network.disabled,
-#network.disconnected,
 #network.linked {
-  color: @col3;
+  color: @col1;
 }
 
 /* */
@@ -114,27 +120,6 @@ tooltip label {
   color: @col3;
 }
 
-@keyframes blink {
-  to {
-    color: @col2;
-  }
-}
-
-@keyframes blip {
-  to {
-    color: greenyellow;
-  }
-}
-
-#idle_inhibitor.activated {
-  animation-name: blip;
-  animation-duration: 0.5s;
-  animation-timing-function: linear;
-  animation-iteration-count: infinite;
-  animation-direction: alternate;
-}
-
-
 #battery.critical:not(.charging),
 #network.disabled,
 #network.disconnected {
@@ -144,4 +129,10 @@ tooltip label {
   animation-timing-function: linear;
   animation-iteration-count: infinite;
   animation-direction: alternate;
+}
+
+@keyframes blink {
+  to {
+    color: @col2;
+  }
 }

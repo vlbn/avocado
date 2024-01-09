@@ -21,10 +21,10 @@
             "*": 3
         }
     },
-    "custom/tvmode": {
-        "format": "",
-        "on-click": "rofi -show drun",
-        "tooltip": false
+    "tray": {
+        "spacing": 0,
+        "show-passive-items": true,
+        "icon-size": 23
     },
     "pulseaudio": {
         "format": "{icon} {volume}",
@@ -44,12 +44,16 @@
                 " "
             ]
         },
-        "on-click": "pavucontrol"
+        "on-click-right": "pavucontrol",
+        "on-click": "pkill pavucontrol"
     },
     "bluetooth": {
-        "format": "",
+        "format": "  {status}",
+        "format-disabled": "  Off",
+        "format-connected": " {num_connections}",
         "interval": 30,
-        "on-click": "blueman-manager"
+        "on-click-right": "blueman-manager",
+        "on-click": "pkill blueman-manager"
     },
     "battery": {
         "states": {
@@ -74,11 +78,11 @@
         "format-ethernet": "  {ipaddr}",
         "format-disconnected": "",
         "tooltip-format": " {ifname} via {gwaddri}",
-        "tooltip-format-wifi": "  {ipaddr} {essid} ({signalStrength})",
-        "tooltip-format-ethernet": "  {ifname} ({ipaddr}/{cidr})",
+        "tooltip-format-wifi": "{ipaddr} {essid}",
+        "tooltip-format-ethernet": "{ifname} ({ipaddr}/{cidr})",
         "tooltip-format-disconnected": "",
         "max-length": 60,
-        "on-click": "kitty ~/.config/scripts/networkmanager.sh"
+        "on-click-right": "kitty ~/.config/scripts/networkmanager.sh"
     },
     "clock": {
         "format": "  {:%H:%M}",
