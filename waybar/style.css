@@ -1,10 +1,30 @@
 * {
-  font-family: "Fira Sans", FontAwesome, Roboto, Helvetica, Arial, sans-serif;
+  font-family: FontAwesome, Roboto, Helvetica, Arial, sans-serif;
 }
 
 @define-color col1 #ffffff;
 @define-color col2 #000000;
 @define-color col3 #ef476f;
+
+/* */
+#window,
+#tray,
+#tray menu,
+#tray > .passive,
+#tray > .needs-attention,
+#group-hardware,
+#custom-avocado,
+#custom-wlogout,
+#clock,
+#pulseaudio,
+#network,
+#bluetooth,
+#battery,
+#backlight {
+  color: @col1;
+  font-size: 1rem;
+  margin: 5px 10px;
+}
 
 button {
   border: none;
@@ -33,12 +53,13 @@ tooltip label {
   color: @col1;
   transition: all 0.3s ease-in-out;
   font-weight: bold;
+  font-size: .6rem;
 }
 
 #workspaces button.active {
   color: @col3;
-  font-size: 1.5rem;
   transition: all 0.3s ease-in-out;
+  font-size: 1rem;
 }
 
 #workspaces button:hover {
@@ -49,35 +70,6 @@ tooltip label {
 
 #waybar {
   background: transparent;
-}
-
-#window {
-  color: @col1;
-  font-size: 1.3rem;
-}
-
-/* */
-#tray > .active {
-  color: aquamarine;
-} 
-
-/* */
-#tray,
-#tray menu,
-#tray > .passive,
-#tray > .needs-attention,
-#group-hardware,
-#custom-avocado,
-#custom-wlogout,
-#clock,
-#pulseaudio,
-#network,
-#bluetooth,
-#battery,
-#backlight {
-  color: @col1;
-  font-size: 1.3rem;
-  margin: 5px 7px;
 }
 
 /* */
