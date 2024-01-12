@@ -1,17 +1,21 @@
 * {
-  font-family: FontAwesome, Roboto, Helvetica, Arial, sans-serif;
+  font-family: Fira Sans Regular, Roboto, Helvetica, Arial, sans-serif;
 }
 
-@define-color col1 #f2e8cf;
-@define-color col2 #4a5759;
-@define-color col3 #6a994e;
+@define-color pulp #F2E8CF;
+@define-color peel #6A994E;
+@define-color seed #BC4749;
 
 /*
 
   avocado palette
-  peel 6a994e seed bc4749 pulp 4a5759
+  peel:6A994E, seed:BC4749, pulp:F2E8CF
 
 */
+
+#window {
+  font-family: Cartograph CF;
+}
 
 #window,
 #tray,
@@ -24,10 +28,9 @@
 #clock,
 #pulseaudio,
 #network,
-#bluetooth,
 #battery,
 #backlight {
-  color: @col1;
+  color: @pulp;
   font-size: 1rem;
   margin: 5px 10px;
 }
@@ -43,27 +46,26 @@ button:hover {
 
 tooltip {
   border-radius: 10px;
-  background-color: @col2;
-  opacity: 0.8;
+  background-color: @seed;
   padding: 20px;
   margin: 0px;
 }
 
 tooltip label {
-  color: @col1;
+  color: @pulp;
 }
 
 /* */
 
 #workspaces button {
-  color: @col1;
+  color: @pulp;
   transition: all 0.3s ease-in-out;
   font-weight: bold;
   font-size: .6rem;
 }
 
 #workspaces button.active {
-  color: @col3;
+  color: @peel;
   transition: all 0.3s ease-in-out;
   font-size: 1rem;
 }
@@ -81,47 +83,33 @@ tooltip label {
 /* */
 
 #pulseaudio.muted {
-  color: @col3;
+  color: @seed;
 }
 
 /* */
 
 #network.ethernet {
-  color: @col1;
+  color: @pulp;
 }
 #network.wifi {
-  color: @color1;
+  color: @pulp;
 }
 
 #network.linked {
-  color: @col1;
-}
-
-/* */
-
-#bluetooth.on {
-  color: @col1;
-}
-
-#bluetooth.connected {
-  color: @col3;
-}
-
-#bluetooth.off {
-  color: @col1;
+  color: @pulp;
 }
 
 /* */
 
 #battery.charging,
 #battery.plugged {
-  color: @col3;
+  color: @peel;
 }
 
 #battery.critical:not(.charging),
 #network.disabled,
 #network.disconnected {
-  color: @col3;
+  color: @seed;
   animation-name: blink;
   animation-duration: 0.5s;
   animation-timing-function: linear;
@@ -131,6 +119,6 @@ tooltip label {
 
 @keyframes blink {
   to {
-    color: @col2;
+    color: @seed;
   }
 }
