@@ -3,10 +3,10 @@
     width = 350
     height = 300
     origin = bottom-right
-    offset = 20x20
+    offset = 10x10
     scale = 0
     notification_limit = 10
-    progress_bar = true
+    progress_bar = false
     progress_bar_height = 10
     progress_bar_frame_width = 1
     progress_bar_min_width = 150
@@ -15,13 +15,12 @@
     icon_corner_radius = 0
     indicate_hidden = yes
     transparency = 0
-    separator_height = 2
+    separator_height = 0
     padding = 10
     horizontal_padding = 10
     text_icon_padding = 0
     frame_width = 0
-    frame_color = "#aaaaaa"
-    gap_size = 0
+    gap_size = 15
     separator_color = frame
     sort = yes
     idle_threshold = 120
@@ -38,12 +37,11 @@
     stack_duplicates = true
     hide_duplicate_count = false
     show_indicators = yes
-    enable_recursive_icon_lookup = true
-    icon_theme = "breeze-dark, Papirus-Dark"
     icon_position = left
+    icon_theme = "manasarovar"
+    enable_recursive_icon_lookup = true
     min_icon_size = 64
     max_icon_size = 64
-    icon_path = /usr/share/icons/gnome/16x16/status/:/usr/share/icons/gnome/16x16/devices/
     sticky_history = yes
     history_length = 50
     dmenu = /usr/bin/dmenu -i -fn Ubuntu-18 -l 30 -p dunst:
@@ -63,20 +61,16 @@
     per_monitor_dpi = false
 
 [urgency_low]
-    background = "#E5E9F0"
-    foreground = "#2E3440"
-    frame_color = ""
+    background = "#f2e8cf"
+    foreground = "#bc4749"
     timeout = 10
 
 [urgency_normal]
-    background = "#2E3440"
-    foreground = "#FFFFFF"
-    frame_color = ""
-    highlight = ""
+    background = "#6a994e"
+    foreground = "#ffffff"
     timeout = 10
 
 [urgency_critical]
-    background = "#ffffff"
-    foreground = "#900000"
-    frame_color = ""
+    background = "#bc4749"
+    foreground = "#ffffff"    
     timeout = 0
