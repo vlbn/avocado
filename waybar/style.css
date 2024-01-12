@@ -2,11 +2,17 @@
   font-family: FontAwesome, Roboto, Helvetica, Arial, sans-serif;
 }
 
-@define-color col1 #dad7cd;
+@define-color col1 #f2e8cf;
 @define-color col2 #4a5759;
-@define-color col3 #ef476f;
+@define-color col3 #6a994e;
 
-/* */
+/*
+
+  avocado palette
+  peel 6a994e seed bc4749 pulp 4a5759
+
+*/
+
 #window,
 #tray,
 #tray menu,
