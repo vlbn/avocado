@@ -24,7 +24,7 @@
     separator_color = frame
     sort = yes
     idle_threshold = 120
-    font = UbuntuMono Nerd Font Mono 12
+    font = Cartograph CF 12
     line_height = 10
     markup = full
     format = "<b><u>%s</u></b>\n%b\n"
