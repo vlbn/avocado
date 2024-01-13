@@ -2,16 +2,16 @@
   font-family: Fira Sans Regular, Roboto, Helvetica, Arial, sans-serif;
 }
 
-@define-color pulp #F2E8CF;
-@define-color peel #6A994E;
-@define-color seed #BC4749;
-
 /*
 
   avocado palette
   peel:6A994E, seed:BC4749, pulp:F2E8CF
 
 */
+
+@define-color pulp #F2E8CF;
+@define-color peel #6A994E;
+@define-color seed #BC4749;
 
 #window {
   font-family: Cartograph CF;
@@ -39,6 +39,7 @@ button {
   border: none;
   border-radius: 0;
 }
+
 button:hover {
   box-shadow: inherit;
   text-shadow: inherit;
@@ -70,13 +71,7 @@ tooltip label {
   font-size: 1rem;
 }
 
-#workspaces button:hover {
-  background: transparent;
-}
-
-/* */
-
-#waybar {
+#workspaces button:hover, #waybar {
   background: transparent;
 }
 
@@ -88,14 +83,7 @@ tooltip label {
 
 /* */
 
-#network.ethernet {
-  color: @pulp;
-}
-#network.wifi {
-  color: @pulp;
-}
-
-#network.linked {
+#network.ethernet, #network.wifi, #network.linked  {
   color: @pulp;
 }
 
@@ -109,7 +97,7 @@ tooltip label {
 #battery.critical:not(.charging),
 #network.disabled,
 #network.disconnected {
-  color: @seed;
+  color: @pulp;
   animation-name: blink;
   animation-duration: 0.5s;
   animation-timing-function: linear;
