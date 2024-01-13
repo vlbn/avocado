@@ -1,15 +1,10 @@
 {
-    "label": "hibernate",
-    "action": "systemctl hibernate",
-    "keybind": "h"
-}
-{
     "label": "suspend",
     "action": "swaylock -f && systemctl suspend",
-    "keybind": "u"
+    "keybind": "s"
 }
 {
     "label": "shutdown",
     "action": "systemctl poweroff",
-    "keybind": "s"
+    "keybind": "a"
 }
