@@ -105,8 +105,23 @@ tooltip label {
   animation-direction: alternate;
 }
 
+#battery.charging{
+  color: @pulp;
+  animation-name: cargando;
+  animation-duration: 0.5s;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
+}
+
 @keyframes blink {
   to {
     color: @seed;
+  }
+}
+
+@keyframes cargando {
+  to {
+    color: @peel;
   }
 }
