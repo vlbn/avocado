@@ -1,2 +1,2 @@
 # avocado
-🥑 archlinux hyprland dot files
+🥑 archlinux hyprland dot files.
