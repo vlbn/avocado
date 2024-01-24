@@ -82,7 +82,7 @@
         "tooltip-format-ethernet": "{ifname} ({ipaddr}/{cidr})",
         "tooltip-format-disconnected": "",
         "max-length": 60,
-        "on-click-right": "kitty ~/.config/scripts/networkmanager.sh"
+        "on-click-right": "kitty ~/.config/scripts/net.sh"
     },
     "clock": {
         "format": "  {:%H:%M}",
