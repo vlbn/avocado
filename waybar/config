@@ -17,6 +17,7 @@
     ],
     "modules-right": [
         "tray",
+        "custom/gg",
         "pulseaudio",
         "battery",
         "network",

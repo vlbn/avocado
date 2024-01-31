@@ -98,6 +98,12 @@
             }
         }
     },
+    "custom/gg": {
+        "format": "🕶",
+        "on-click": "pkill spotify",
+        "on-click-right": "spotify",
+        "tooltip": false
+    },    
     "custom/wlogout": {
         "format": "",
         "on-click": "pkill wlogout || wlogout",
