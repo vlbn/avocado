@@ -1,2 +1,4 @@
 # avocado
-🥑 archlinux hyprland dot files
+🥑 hyprland dot files
+
+`this is a minimalistic bloat-free hyprland setup for archlinux`
